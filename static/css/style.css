@@ -884,7 +884,7 @@
     background:var(--off);
     border:1px solid var(--line);
   }
-  .founder-photo img{width:100%; height:100%; object-fit:cover;}
+  .founder-photo img{width:100%; height:100%; object-fit:cover; object-position:center top;}
   .founder-text .section-tag{margin-bottom:14px;}
   .founder-text h2{
     font-size:clamp(26px,3vw,36px);
@@ -968,14 +968,13 @@
     text-align:center;
   }
   .team-photo{
-    aspect-ratio:1/1;
     border-radius:16px;
     overflow:hidden;
     background:var(--off);
     border:1px solid var(--line);
     margin-bottom:18px;
   }
-  .team-photo img{width:100%; height:100%; object-fit:cover;}
+  .team-photo img{width:auto; height:auto; display:block;}
   .team-card h4{font-size:16.5px; font-weight:600;}
   .team-card p{font-size:13.5px; color:var(--gray-500); margin-top:3px;}
   @media (max-width:760px){.team-grid{grid-template-columns:repeat(2,1fr);}}

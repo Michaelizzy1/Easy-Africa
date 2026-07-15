@@ -16,13 +16,6 @@
 
 <section class="section work-listing">
   <div class="wrap">
-    <div class="work-filter reveal" id="workFilter">
-      <span class="work-filter-pill active" data-filter="all">All work</span>
-      <span class="work-filter-pill" data-filter="Education">Education</span>
-      <span class="work-filter-pill" data-filter="E-commerce">E-commerce</span>
-      <span class="work-filter-pill" data-filter="Retail">Retail</span>
-      <span class="work-filter-pill" data-filter="Real Estate">Real Estate</span>
-    </div>
 
     <div class="work-grid reveal" id="workGrid">
       {% for project in projects %}
@@ -41,7 +34,7 @@
         </div>
       </div>
       {% empty %}
-      <p style="color:var(--gray-500); font-size:15px;">No projects published yet — add some from the Django admin.</p>
+
       {% endfor %}
     </div>
 

@@ -1,3 +1,4 @@
+
 {% extends "mysite/base.html" %}
 {% load static %}
 
@@ -16,8 +17,7 @@
     </div>
   </div>
   <div class="hero-media reveal">
-    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop" alt="Team collaborating on a digital product">
-    <div class="hero-media-tag"><strong>10+ products shipped</strong> across education, retail, real estate, and finance.</div>
+    <img src="{% static 'assets/img1.jpg' %}" alt="Team collaborating on a digital product">
   </div>
 </section>
 
@@ -182,13 +182,6 @@
       <p>A sample of what we've shipped for clients across sectors.</p>
     </div>
 
-    <div class="work-filter reveal">
-      <span class="work-filter-pill active">All work</span>
-      <span class="work-filter-pill">Education</span>
-      <span class="work-filter-pill">E-commerce</span>
-      <span class="work-filter-pill">Retail</span>
-      <span class="work-filter-pill">Real Estate</span>
-    </div>
 
     <div class="work-grid reveal">
       {% for project in projects %}
@@ -207,7 +200,6 @@
         </div>
       </div>
       {% empty %}
-      <p style="color:var(--gray-500); font-size:15px;">No projects published yet — add some from the Django admin.</p>
       {% endfor %}
     </div>
 
@@ -296,10 +288,7 @@
       </div>
     </div>
     <div class="map-visual reveal">
-      <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M96 8 C110 6 122 14 128 26 C134 38 132 50 140 58 C150 68 164 68 170 80 C176 92 168 104 172 116 C176 128 168 138 158 146 C150 152 148 162 140 170 C132 178 132 190 122 196 C114 200 108 194 104 186 C100 178 92 176 88 168 C84 160 88 150 82 142 C76 134 64 134 60 124 C56 114 64 106 60 96 C56 86 44 84 42 72 C40 60 50 52 48 40 C46 28 58 20 68 16 C78 12 84 10 96 8 Z"
-        stroke="#E31E24" stroke-width="1.6" fill="rgba(227,30,36,0.06)"/>
-      </svg>
+      <img src="{% static 'assets/company.png' %}" alt="Map of Africa">
     </div>
   </div>
 </section>
