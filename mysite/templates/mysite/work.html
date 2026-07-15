@@ -1,0 +1,54 @@
+{% extends "mysite/base.html" %}
+{% load static %}
+
+{% block title %}Our Work — Easy Africa{% endblock %}
+{% block og_title %}Our Work — Easy Africa{% endblock %}
+{% block og_description %}Real products, in production. See what Easy Africa has built across education, e-commerce, retail, and real estate.{% endblock %}
+
+{% block content %}
+<section class="wrap work-hero">
+  <div class="reveal">
+    <span class="section-tag">Our work</span>
+    <h1>Real products, <span>in production.</span></h1>
+    <p>Every project here is live, shipped, and used by real businesses — not concepts.</p>
+  </div>
+</section>
+
+<section class="section work-listing">
+  <div class="wrap">
+    <div class="work-filter reveal" id="workFilter">
+      <span class="work-filter-pill active" data-filter="all">All work</span>
+      <span class="work-filter-pill" data-filter="Education">Education</span>
+      <span class="work-filter-pill" data-filter="E-commerce">E-commerce</span>
+      <span class="work-filter-pill" data-filter="Retail">Retail</span>
+      <span class="work-filter-pill" data-filter="Real Estate">Real Estate</span>
+    </div>
+
+    <div class="work-grid reveal" id="workGrid">
+      {% for project in projects %}
+      <div class="work-card{% if project.is_featured %} featured{% endif %}" data-category="{{ project.category }}">
+        <div class="work-media">
+          {% if project.image %}
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+          {% else %}
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" alt="{{ project.title }}">
+          {% endif %}
+        </div>
+        <div class="work-body">
+          <span class="work-tag">{{ project.category }}</span>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+        </div>
+      </div>
+      {% empty %}
+      <p style="color:var(--gray-500); font-size:15px;">No projects published yet — add some from the Django admin.</p>
+      {% endfor %}
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:56px;">
+      <p style="font-size:14.5px; color:var(--gray-700); margin-bottom:20px;">Have a project in mind? We'd love to hear about it.</p>
+      <a href="{% url 'contact' %}" class="btn-primary">Start a project →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

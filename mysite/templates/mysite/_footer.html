@@ -1,0 +1,48 @@
+{% load static %}
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-left">
+      <a href="{% url 'home' %}" class="logo-mark">
+        <img src="{% static 'assets/logo.png' %}" alt="Easy Africa">EASY AFRICA
+      </a>
+      <p>Websites, mobile apps, software, branding, and IT solutions for the African market.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.85-.37-4.09-1.08l-.29-.17-3.12.82.83-3.04-.19-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24l-.12.02zm-3.24 3.9c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.14 3.64 2.03.87 2.44.7 2.88.65.44-.04 1.41-.58 1.61-1.13.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.32-.75-1.8-.2-.47-.4-.4-.54-.41h-.24z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13.6 10.5 20.4 2.5h-1.9l-5.9 6.9L7.9 2.5H2.5l7.2 10.5-7.2 8.5h1.9l6.2-7.3 5 7.3h5.4l-7.4-10.7ZM11 12.4l-.7-1L4.6 3.8h2.4l4.6 6.6.7 1 6 8.6h-2.4L11 12.4Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'work' %}">Work</a>
+        <a href="{% url 'home' %}#services">Services</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="mailto:hello@easyafrica.com">Email</a>
+        <a href="https://wa.me/2340000000000">WhatsApp</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Easy Africa. All rights reserved.</span>
+    <span style="display:flex; gap:20px;">
+      <a href="{% url 'privacy_policy' %}" style="color:inherit;">Privacy Policy</a>
+      <a href="{% url 'terms' %}" style="color:inherit;">Terms of Service</a>
+      <span>Lagos, Nigeria</span>
+    </span>
+  </div>
+</footer>

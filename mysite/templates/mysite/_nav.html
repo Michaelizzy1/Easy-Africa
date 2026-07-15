@@ -1,0 +1,25 @@
+{% load static %}
+<nav>
+  <div class="nav-inner">
+    <a href="{% url 'home' %}" class="logo-mark">
+      <img src="{% static 'assets/logo.png' %}" alt="Easy Africa">EASY AFRICA
+    </a>
+    <div class="nav-links">
+      <a href="{% url 'home' %}#services">Services</a>
+      <a href="{% url 'work' %}">Work</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'home' %}#faq">FAQ</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{% url 'home' %}#services">Services</a>
+    <a href="{% url 'work' %}">Work</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'home' %}#faq">FAQ</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </div>
+</nav>

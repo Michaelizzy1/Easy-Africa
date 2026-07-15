@@ -1,0 +1,133 @@
+{% extends "mysite/base.html" %}
+{% load static %}
+
+{% block title %}About — Easy Africa{% endblock %}
+{% block og_title %}About — Easy Africa{% endblock %}
+{% block og_description %}Meet the studio behind Easy Africa — our story, our values, and the people building digital infrastructure for African business.{% endblock %}
+
+{% block content %}
+<section class="wrap about-hero">
+  <div class="reveal">
+    <span class="section-tag">About Easy Africa</span>
+    <h1>Built by people who understand <span>African</span> business, from the inside.</h1>
+    <p>We're a Lagos-based studio helping businesses across the continent go digital — one real product at a time.</p>
+  </div>
+</section>
+
+<section class="wrap founder-section">
+  <div class="founder-inner">
+    <div class="founder-photo reveal">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="Founder portrait">
+    </div>
+    <div class="founder-text reveal">
+      <span class="section-tag">Mission & Vision</span>
+      <h2>Making world-class digital products accessible to every African business.</h2>
+      <p><span class="mv-label">Our Mission</span> is to give businesses across Africa the same quality of websites, apps, and software that global companies take for granted — built with local context, local payments, and local realities in mind from day one.</p>
+      <p><span class="mv-label">Our Vision</span> is a continent where no good business is held back by a bad website, a broken checkout, or a system that doesn't fit how people here actually work. We want Easy Africa to be the studio businesses trust to get their digital foundation right, the first time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-tag">What we stand for</span>
+        <h2>The values behind every project.</h2>
+      </div>
+      <p>These aren't posters on a wall — they're how we actually work.</p>
+    </div>
+
+    <div class="values-grid reveal">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Reliability first</h3>
+        <p>Code that works when it matters — during exams, during checkout, during the moments your business can't afford downtime.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        </div>
+        <h3>Straight talk</h3>
+        <p>Clear timelines, clear pricing, and honest answers — even when the honest answer isn't what you were hoping to hear.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Built for here</h3>
+        <p>Naira pricing, local payment rails, local documentation — we design for the market you actually operate in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-tag">Founder</span>
+        <h2>The person behind Easy Africa.</h2>
+      </div>
+      <p>Hands-on with every project, from first sketch to final deployment.</p>
+    </div>
+
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Founder portrait">
+        </div>
+        <h4>Founder</h4>
+        <p>Design & Full-Stack Engineering</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <div class="stat-bar reveal">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        </div>
+        <h4>10+</h4>
+        <p>Products shipped</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <h4>5</h4>
+        <p>Core disciplines</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>100%</h4>
+        <p>In-house delivery</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M14 9h1"/><path d="M14 13h1"/><path d="M10 21v-4h4v4"/></svg>
+        </div>
+        <h4>4</h4>
+        <p>Sectors served</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="reveal">
+    <h2>Want to build something <span>real</span> together?</h2>
+    <div class="cta-actions">
+      <a href="{% url 'contact' %}" class="btn-primary">Start a project →</a>
+      <a href="{% url 'work' %}" class="btn-secondary">See our work</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
