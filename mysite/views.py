@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
@@ -47,10 +47,12 @@ def contact_submit(request):
         # Email the studio inbox. With EMAIL_BACKEND left as the console
         # backend (the default in settings.py), this just prints to the
         # terminal during development instead of sending a real email.
+        # reply_to is set to the enquirer's address, so hitting "Reply" in
+        # your inbox goes straight to them instead of back to yourself.
         try:
-            send_mail(
+            email = EmailMessage(
                 subject=f"New project inquiry: {submission.service}",
-                message=(
+                body=(
                     f"Name: {submission.name}\n"
                     f"Email: {submission.email}\n"
                     f"Service: {submission.service}\n"
@@ -58,13 +60,16 @@ def contact_submit(request):
                     f"{submission.message}"
                 ),
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_FORM_RECIPIENT],
-                fail_silently=True,
+                to=[settings.CONTACT_FORM_RECIPIENT],
+                reply_to=[submission.email],
             )
-        except Exception:
+            sent = email.send(fail_silently=False)
+            print(f"Emails sent: {sent}")
+        except Exception as e:
             # Don't let an email delivery failure block form submission —
             # the enquiry is already safely saved in the database either way.
-            pass
+            print(f"Email Error: {e}")
+            # pass
 
         return JsonResponse({'success': True})
 
