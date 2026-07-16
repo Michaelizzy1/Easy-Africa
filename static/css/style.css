@@ -664,10 +664,9 @@
   .map-visual{
     aspect-ratio:1/1; border-radius:18px; background:var(--white);
     border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
+    overflow: hidden;
   }
-  .map-visual svg{width:56%;}
-  @media (max-width:860px){.about-inner{grid-template-columns:1fr; gap:48px;}}
+  .map-visual img{width:100%; height:100%; object-fit: cover; display: block;}
 
   /* ---------- FAQ ---------- */
   .faq-list{
