@@ -651,6 +651,9 @@
   .about-inner{
     display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
   }
+@media (max-width:860px){
+  .about-inner{grid-template-columns: 1fr; gap: 48px;}
+}
   .about-inner h2{font-size:clamp(26px,3vw,40px); font-weight:700; line-height:1.18; margin-bottom:20px;}
   .about-inner h2 span{color:var(--red);}
   .about-inner p{font-size:15.5px; line-height:1.72; color:var(--gray-700); margin-bottom:16px;}
@@ -662,7 +665,7 @@
     border:1px solid var(--line); padding:8px 16px; border-radius:100px;
   }
   .map-visual{
-    aspect-ratio:1/1; border-radius:18px; background:var(--white);
+    aspect-ratio: 1/1; border-radius:18px; background:var(--white);
     border:1px solid var(--line);
     overflow: hidden;
   }
