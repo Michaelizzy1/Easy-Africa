@@ -33,6 +33,7 @@ DEBUG = False
 # DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', 'easyafrica.com.ng', 'www.easyafrica.com.ng']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
