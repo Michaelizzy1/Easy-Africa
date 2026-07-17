@@ -1,4 +1,5 @@
 
+
 {% extends "mysite/base.html" %}
 {% load static %}
 
@@ -209,66 +210,19 @@
   </div>
 </section>
 
-<section class="section" style="background:var(--white);">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="section-tag">What clients say</span>
-        <h2>Trusted by teams who needed it done right.</h2>
-      </div>
-      <p>A few words from people we've built with.</p>
+<section class="wrap founder-note-section" style="background:var(--white);">
+  <div class="founder-inner">
+    <div class="founder-photo reveal">
+      <img src="{% static 'assets/founder.jpg' %}" alt="Michael Israel Eneche, Founder of Easy Africa">
     </div>
-
-    <div class="testimonial-carousel reveal">
-      <div class="testimonial-track-wrap">
-        <div class="testimonial-track" id="testimonialTrack">
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p>"Easy Africa took our exam system from paper to a fully digital portal in weeks. Autosave alone saved us from losing student work during outages."</p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">EQ</div>
-                <div>
-                  <div class="testimonial-name">Academic Coordinator</div>
-                  <div class="testimonial-role">Eeqraa School</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p>"We needed a storefront that could actually take payments reliably. The Paystack integration has never given us a single issue since launch."</p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">LG</div>
-                <div>
-                  <div class="testimonial-name">Founder</div>
-                  <div class="testimonial-role">Lumora Glow</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p>"They understood the Nigerian market from day one — Naira pricing, local documentation, no back-and-forth explaining the basics."</p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">JP</div>
-                <div>
-                  <div class="testimonial-name">Managing Director</div>
-                  <div class="testimonial-role">Jaswill Properties</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-controls">
-        <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="testimonial-dots" id="testimonialDots"></div>
-        <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
+    <div class="founder-text reveal">
+      <span class="section-tag">A note from the founder</span>
+      <h2>Every project here has a <span>name</span> behind it — One Team.</h2>
+      <p>We started Easy Africa after years of building websites, software and digital solution for businesses and organizations that just needed things to work — reliably, and without excuses. That's still the standard every project is held to.</p>
+      <p>We're not interested in handing you a template and disappearing. Every client on this site is one we've worked with directly, from first call to launch and beyond. If something breaks, you're not chasing a support ticket — you're talking to the person who built it.</p>
+      <div class="founder-signature">
+        Michael Israel Eneche
+        <span>Founder, Easy Africa</span>
       </div>
     </div>
   </div>
@@ -337,7 +291,7 @@
           <span class="faq-icon"></span>
         </button>
         <div class="faq-answer">
-          <p>Yes — we regularly take over, redesign, or extend existing sites and systems rather than starting from scratch, depending on what makes sense for your budget and goals.</p>
+          <p>Yes — we can take over, redesign, or extend existing sites and systems rather than starting from scratch, depending on what makes sense for your budget and goals.</p>
         </div>
       </div>
       <div class="faq-item">
