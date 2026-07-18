@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # 'cloudinary_storage',  # Cloudinary temporarily disabled
     'django.contrib.staticfiles',
+    # 'cloudinary',  # Cloudinary temporarily disabled
     'mysite',
 ]
 
@@ -146,6 +148,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Media files (user/admin-uploaded content, e.g. case study images added later)
+# Cloudinary temporarily disabled — uncomment below and comment out the
+# MEDIA_ROOT lines to switch back once CLOUDINARY_* env vars are set.
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+#     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+#     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+# }
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

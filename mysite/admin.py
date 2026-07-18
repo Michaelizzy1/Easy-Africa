@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import ContactSubmission, NewsletterSubscriber, Project
+from .models import Category, ContactSubmission, NewsletterSubscriber, Project
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
 
 
 @admin.register(ContactSubmission)

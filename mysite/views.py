@@ -9,7 +9,7 @@ from .models import Project
 
 
 def home(request):
-    projects = Project.objects.filter(is_published=True)[:4]
+    projects = Project.objects.filter(is_published=True)[:2]
     return render(request, 'mysite/home.html', {'projects': projects})
 
 
