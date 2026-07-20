@@ -63,8 +63,14 @@ def contact_submit(request):
                 to=[settings.CONTACT_FORM_RECIPIENT],
                 reply_to=[submission.email],
             )
+            print("Backend:", settings.EMAIL_BACKEND)
+            print("Host:", settings.EMAIL_HOST)
+            print("User:", settings.EMAIL_HOST_USER)
+            print("Recipient:", settings.CONTACT_FORM_RECIPIENT)
+
             sent = email.send(fail_silently=False)
-            print(f"Emails sent: {sent}")
+
+            print("Sent:", sent)
         except Exception as e:
             # Don't let an email delivery failure block form submission —
             # the enquiry is already safely saved in the database either way.
