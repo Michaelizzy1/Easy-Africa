@@ -1,25 +1,78 @@
 
 
 
+
 {% extends "mysite/base.html" %}
 {% load static %}
 
-{% block title %}Easy Africa — Websites, Mobile Apps, Software, Branding, IT Solutions{% endblock %}
-{% block og_title %}Easy Africa — Websites, Mobile Apps, Software, Branding, IT Solutions{% endblock %}
-{% block og_description %}Digital infrastructure for Africa's next generation of businesses. We design and build websites, apps, and software for companies across the continent.{% endblock %}
+{% block title %}Web Design &amp; Software Development Company in Nigeria | Easy Africa{% endblock %}
+{% block meta_description %}Easy Africa is a web design and software development company in Abuja, Nigeria, building websites, mobile apps, custom software, and branding for businesses across Africa. Get a free quote today.{% endblock %}
+{% block og_title %}Web Design & Software Development Company in Nigeria | Easy Africa{% endblock %}
+{% block og_description %}Easy Africa builds websites, mobile apps, custom software, and brand identity for businesses across Nigeria and Africa — in-house, from first prototype to production.{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a project cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on scope. A simple marketing website starts differently from a full e-commerce platform or custom software build. We give you a clear, itemized quote after understanding what you need — no hidden fees, no guesswork."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A marketing website usually takes 2–4 weeks. Mobile apps and custom software depend on complexity, but we always agree on a timeline upfront and keep you updated at every stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer support after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every project includes a support window after launch, and we offer ongoing maintenance plans for clients who want continued updates, monitoring, and fixes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with an existing website or system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we can take over, redesign, or extend existing sites and systems rather than starting from scratch, depending on what makes sense for your budget and goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with clients outside Nigeria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While we're based in Nigeria and understand the local market deeply, we work remotely with clients across Africa and beyond."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <section class="wrap hero">
   <div class="reveal">
     <h1>Digital infrastructure for <span>Africa's</span> next generation of business.</h1>
-    <p class="hero-sub">Easy Africa designs and engineers the websites, apps, and software that businesses across the continent run on — from first prototype to production, built to last.</p>
+    <p class="hero-sub">Easy Africa is a web design and software development company based in Abuja, Nigeria. We design and engineer the websites, apps, and software that businesses across Africa run on — from first prototype to production, built to last.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Start a project →</a>
       <a href="#work" class="btn-secondary">See our work</a>
     </div>
   </div>
   <div class="hero-media reveal">
-    <img src="https://res.cloudinary.com/dydpldhso/image/upload/v1784134535/img2_jpisou.png" alt="Team collaborating on a digital product">
+    <img src="https://res.cloudinary.com/dydpldhso/image/upload/v1784134535/img2_jpisou.png" alt="Easy Africa team collaborating on a website and software project" width="800" height="1000" fetchpriority="high">
   </div>
 </section>
 
@@ -28,28 +81,28 @@
     <div class="stat-bar reveal">
       <div class="stat-card">
         <div class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
         </div>
         <h4>10+</h4>
         <p>Products shipped</p>
       </div>
       <div class="stat-card">
         <div class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         </div>
         <h4>5</h4>
         <p>Core disciplines</p>
       </div>
       <div class="stat-card">
         <div class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
         </div>
         <h4>100%</h4>
         <p>In-house delivery</p>
       </div>
     <div class="stat-card">
       <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M14 9h1"/><path d="M14 13h1"/><path d="M10 21v-4h4v4"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M14 9h1"/><path d="M14 13h1"/><path d="M10 21v-4h4v4"/></svg>
       </div>
       <h4>4</h4>
       <p>Sectors served</p>
@@ -71,42 +124,42 @@
     <div class="service-grid reveal">
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/></svg>
         </div>
-        <h3 class="service-name">Websites</h3>
-        <p class="service-desc">Marketing sites, storefronts, and portals built fast and built to last.</p>
+        <h3 class="service-name">Web Design & Development</h3>
+        <p class="service-desc">Marketing sites, storefronts, and portals built fast and built to last — for businesses across Nigeria and Africa.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
         </div>
-        <h3 class="service-name">Mobile Apps</h3>
+        <h3 class="service-name">Mobile App Development</h3>
         <p class="service-desc">Native and cross-platform apps for the phones your customers use.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
         </div>
-        <h3 class="service-name">Software</h3>
+        <h3 class="service-name">Custom Software Development</h3>
         <p class="service-desc">Custom backends, dashboards, and internal tools that fit how you work.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6.5.9-4.7 4.6L18 20l-6-3.2L6 20l1.2-6.5L2.5 8.9 9 8z"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6.5.9-4.7 4.6L18 20l-6-3.2L6 20l1.2-6.5L2.5 8.9 9 8z"/></svg>
         </div>
-        <h3 class="service-name">Branding</h3>
+        <h3 class="service-name">Branding & Identity Design</h3>
         <p class="service-desc">Identity systems that hold up across every screen and printed page.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
         </div>
-        <h3 class="service-name">IT Solutions</h3>
+        <h3 class="service-name">IT Solutions & Support</h3>
         <p class="service-desc">Infrastructure, support, and systems that keep the business running.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
         </div>
         <h3 class="service-name">Not sure what you need?</h3>
         <p class="service-desc">Tell us the problem — we'll help you scope the right solution.</p>
@@ -129,7 +182,7 @@
       <div class="process-step">
         <div class="process-icon-row">
           <div class="process-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
           <span class="process-step-num">01</span>
         </div>
@@ -140,7 +193,7 @@
       <div class="process-step">
         <div class="process-icon-row">
           <div class="process-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
           </div>
           <span class="process-step-num">02</span>
         </div>
@@ -151,7 +204,7 @@
       <div class="process-step">
         <div class="process-icon-row">
           <div class="process-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <span class="process-step-num">03</span>
         </div>
@@ -162,7 +215,7 @@
       <div class="process-step">
         <div class="process-icon-row">
           <div class="process-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
           </div>
           <span class="process-step-num">04</span>
         </div>
@@ -190,9 +243,9 @@
       <div class="work-card{% if project.is_featured %} featured{% endif %}">
         <div class="work-media">
           {% if project.display_image_url %}
-            <img src="{{ project.display_image_url }}" alt="{{ project.title }}">
+            <img src="{{ project.display_image_url }}" alt="{{ project.title }} — {{ project.category }} project by Easy Africa" width="800" height="500" loading="lazy">
           {% else %}
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" alt="{{ project.title }}">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" alt="{{ project.title }} — {{ project.category }} project by Easy Africa" width="800" height="500" loading="lazy">
           {% endif %}
         </div>
         <div class="work-body">
@@ -214,7 +267,7 @@
 <section class="wrap founder-note-section" style="background:var(--white);">
   <div class="founder-inner">
     <div class="founder-photo reveal">
-      <img src="{% static 'assets/founder.jpg' %}" alt="Michael Israel Eneche, Founder of Easy Africa">
+      <img src="{% static 'assets/founder.jpg' %}" alt="Michael Israel Eneche, Founder of Easy Africa" width="800" height="1000" loading="lazy">
     </div>
     <div class="founder-text reveal">
       <span class="section-tag">A note from the founder</span>
@@ -243,7 +296,7 @@
       </div>
     </div>
     <div class="map-visual reveal">
-      <img src="https://res.cloudinary.com/dydpldhso/image/upload/v1784134899/file_00000000163871f4b428564066c52817_uytzw7.png" alt="Easy Africa Logo">
+      <img src="https://res.cloudinary.com/dydpldhso/image/upload/v1784134899/file_00000000163871f4b428564066c52817_uytzw7.png" alt="Map of the African countries Easy Africa serves: Nigeria, Ghana, Kenya, and remote clients" width="800" height="800" loading="lazy">
     </div>
   </div>
 </section>
@@ -301,7 +354,7 @@
           <span class="faq-icon"></span>
         </button>
         <div class="faq-answer">
-          <p>Yes. While we're based in Lagos and understand the Nigerian market deeply, we work remotely with clients across Africa and beyond.</p>
+          <p>Yes. While we're based in Abuja and understand the Nigerian market deeply, we work remotely with clients across Africa and beyond.</p>
         </div>
       </div>
     </div>
@@ -315,7 +368,7 @@
       <p>Tell us what you're building and we'll get back to you within one business day.</p>
       <div class="contact-detail">
         <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
         </div>
         <div>
           <span class="contact-detail-label">Email</span>
@@ -324,7 +377,7 @@
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.85-.37-4.09-1.08l-.29-.17-3.12.82.83-3.04-.19-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24l-.12.02zm-3.24 3.9c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.14 3.64 2.03.87 2.44.7 2.88.65.44-.04 1.41-.58 1.61-1.13.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.32-.75-1.8-.2-.47-.4-.4-.54-.41h-.24z"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.85-.37-4.09-1.08l-.29-.17-3.12.82.83-3.04-.19-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24l-.12.02zm-3.24 3.9c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.14 3.64 2.03.87 2.44.7 2.88.65.44-.04 1.41-.58 1.61-1.13.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.32-.75-1.8-.2-.47-.4-.4-.54-.41h-.24z"/></svg>
         </div>
         <div>
           <span class="contact-detail-label">WhatsApp</span>
@@ -333,7 +386,7 @@
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
           <span class="contact-detail-label">Based in</span>

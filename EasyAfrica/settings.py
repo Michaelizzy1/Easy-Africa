@@ -35,6 +35,19 @@ DEBUG = False
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', 'easyafrica.com.ng', 'www.easyafrica.com.ng']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# Security headers — improves Chrome/Search Safe Browsing trust signals
+# and is a (minor) Google ranking factor. Only enforced when DEBUG is off,
+# so local development over plain http:// still works normally.
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
+
 
 # Application definition
 
@@ -159,14 +172,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-EMAIL_BACKEND = os.environ.get(
-    'DJANGO_EMAIL_BACKEND',
-    'django.core.mail.backends.console.EmailBackend'
-)
-EMAIL_BACKEND = os.environ.get(
-    'DJANGO_EMAIL_BACKEND',
-    'django.core.mail.backends.console.EmailBackend'
-)
+# EMAIL_BACKEND = os.environ.get(
+#     'DJANGO_EMAIL_BACKEND',
+#     'django.core.mail.backends.console.EmailBackend'
+# )
+# EMAIL_BACKEND = os.environ.get(
+#     'DJANGO_EMAIL_BACKEND',
+#     'django.core.mail.backends.console.EmailBackend'
+# )
 EMAIL_HOST = os.environ.get('DJANGO_EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.environ.get('DJANGO_EMAIL_PORT', 587))
 EMAIL_USE_TLS = os.environ.get('DJANGO_EMAIL_USE_TLS', 'True') == 'True'

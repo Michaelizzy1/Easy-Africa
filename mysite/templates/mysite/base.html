@@ -1,4 +1,5 @@
 
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +7,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}Easy Africa — Websites, Mobile Apps, Software, Branding, IT Solutions{% endblock %}</title>
+<meta name="description" content="{% block meta_description %}Easy Africa builds websites, mobile apps, software, and brand identity for businesses across Nigeria and Africa. Based in Abuja, shipping production-ready digital products in weeks, not months.{% endblock %}">
+<meta name="robots" content="{% block robots %}index, follow{% endblock %}">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="{% block canonical %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock %}">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% block og_title %}Easy Africa{% endblock %}">
+<meta property="og:site_name" content="Easy Africa">
+<meta property="og:locale" content="en_NG">
+<meta property="og:title" content="{% block og_title %}Easy Africa — Websites, Mobile Apps, Software, Branding, IT Solutions{% endblock %}">
 <meta property="og:description" content="{% block og_description %}Digital infrastructure for Africa's next generation of business.{% endblock %}">
 <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'assets/og-share-image.png' %}{% endblock %}">
 <meta property="og:image:width" content="1200">
@@ -32,6 +39,46 @@
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% block extra_css %}{% endblock %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "{{ request.scheme }}://{{ request.get_host }}/#organization",
+  "name": "Easy Africa",
+  "alternateName": "Easy Africa Technologies",
+  "url": "{{ request.scheme }}://{{ request.get_host }}/",
+  "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'assets/logo.png' %}",
+  "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'assets/og-share-image.png' %}",
+  "description": "Easy Africa designs and engineers websites, mobile apps, software, branding, and IT solutions for businesses across Nigeria and the African continent.",
+  "email": "easyafricatechnologies@gmail.com",
+  "telephone": "+234-703-394-7599",
+  "priceRange": "₦₦",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Abuja",
+    "addressCountry": "NG"
+  },
+  "areaServed": {
+    "@type": "Continent",
+    "name": "Africa"
+  },
+  "sameAs": [
+    "https://www.instagram.com/easyafricatechnologies",
+    "https://www.linkedin.com/in/michael-israel-310097355",
+    "https://www.facebook.com/Michael.Israel.9022666",
+    "https://wa.me/2347033947599"
+  ],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & Development"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile App Development"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Software Development"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Branding & Identity Design"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "IT Solutions & Support"}}
+  ]
+}
+</script>
+{% block structured_data %}{% endblock %}
 </head>
 <body>
 

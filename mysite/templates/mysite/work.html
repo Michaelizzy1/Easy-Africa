@@ -1,10 +1,47 @@
 
+
 {% extends "mysite/base.html" %}
 {% load static %}
 
-{% block title %}Our Work — Easy Africa{% endblock %}
+{% block title %}Our Work | Website & App Design Portfolio — Easy Africa{% endblock %}
+{% block meta_description %}See websites, mobile apps, and software Easy Africa has built for clients in education, e-commerce, retail, and real estate across Nigeria and Africa.{% endblock %}
 {% block og_title %}Our Work — Easy Africa{% endblock %}
 {% block og_description %}Real products, in production. See what Easy Africa has built across education, e-commerce, retail, and real estate.{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ request.scheme }}://{{ request.get_host }}/"},
+    {"@type": "ListItem", "position": 2, "name": "Work", "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'work' %}"}
+  ]
+}
+</script>
+{% if projects %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for project in projects %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.counter }},
+      "item": {
+        "@type": "CreativeWork",
+        "name": {{ project.title|escapejs }},
+        "description": {{ project.summary|escapejs }}{% if project.category %},
+        "about": {{ project.category|escapejs }}{% endif %}
+      }
+    }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+{% endblock %}
 
 {% block content %}
 <section class="wrap work-hero">
@@ -23,9 +60,9 @@
       <div class="work-card{% if project.is_featured %} featured{% endif %}" data-category="{{ project.category }}">
         <div class="work-media">
           {% if project.display_image_url %}
-            <img src="{{ project.display_image_url }}" alt="{{ project.title }}">
+            <img src="{{ project.display_image_url }}" alt="{{ project.title }} — {{ project.category }} project by Easy Africa" width="800" height="500" loading="lazy">
           {% else %}
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" alt="{{ project.title }}">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" alt="{{ project.title }} — {{ project.category }} project by Easy Africa" width="800" height="500" loading="lazy">
           {% endif %}
         </div>
         <div class="work-body">

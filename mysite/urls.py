@@ -8,6 +8,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
     path('terms/', views.terms, name='terms'),
+    path('robots.txt', views.robots_txt, name='robots_txt'),
+    path('sitemap.xml', views.sitemap_xml, name='sitemap_xml'),
 
     # Form submission endpoints (called via fetch() from static/js/main.js)
     path('contact/submit/', views.contact_submit, name='contact_submit'),

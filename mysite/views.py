@@ -1,11 +1,60 @@
 from django.conf import settings
 from django.core.mail import EmailMessage
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
 from django.views.decorators.http import require_http_methods
 
 from .forms import ContactForm, NewsletterForm
 from .models import Project
+
+
+def robots_txt(request):
+    """Serves /robots.txt — points crawlers at the sitemap and keeps the
+    admin and internal form-submit endpoints out of the crawl."""
+    base = f"{request.scheme}://{request.get_host()}"
+    lines = [
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /boss/",
+        "Disallow: /contact/submit/",
+        "Disallow: /newsletter/submit/",
+        "",
+        f"Sitemap: {base}{reverse('sitemap_xml')}",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
+
+
+def sitemap_xml(request):
+    """A minimal hand-rolled sitemap covering the site's real, indexable
+    pages. Static pages get a fixed lastmod; the Work page's lastmod
+    tracks the most recently updated published project so it's never
+    stale for long."""
+    base = f"{request.scheme}://{request.get_host()}"
+
+    latest_project = Project.objects.filter(is_published=True).order_by('-created_at').first()
+    work_lastmod = latest_project.created_at.date().isoformat() if latest_project else None
+
+    pages = [
+        {"loc": reverse('home'), "priority": "1.0", "changefreq": "weekly"},
+        {"loc": reverse('work'), "priority": "0.9", "changefreq": "weekly", "lastmod": work_lastmod},
+        {"loc": reverse('about'), "priority": "0.7", "changefreq": "monthly"},
+        {"loc": reverse('contact'), "priority": "0.7", "changefreq": "monthly"},
+    ]
+
+    xml_parts = ['<?xml version="1.0" encoding="UTF-8"?>',
+                 '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for page in pages:
+        xml_parts.append("  <url>")
+        xml_parts.append(f"    <loc>{base}{page['loc']}</loc>")
+        if page.get("lastmod"):
+            xml_parts.append(f"    <lastmod>{page['lastmod']}</lastmod>")
+        xml_parts.append(f"    <changefreq>{page['changefreq']}</changefreq>")
+        xml_parts.append(f"    <priority>{page['priority']}</priority>")
+        xml_parts.append("  </url>")
+    xml_parts.append("</urlset>")
+
+    return HttpResponse("\n".join(xml_parts), content_type="application/xml")
 
 
 def home(request):
