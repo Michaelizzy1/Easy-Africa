@@ -1,5 +1,6 @@
 
 
+
 {% extends "mysite/base.html" %}
 {% load static %}
 
@@ -31,9 +32,9 @@
       "position": {{ forloop.counter }},
       "item": {
         "@type": "CreativeWork",
-        "name": {{ project.title|escapejs }},
-        "description": {{ project.summary|escapejs }}{% if project.category %},
-        "about": {{ project.category|escapejs }}{% endif %}
+        "name": "{{ project.title|escapejs }}",
+        "description": "{{ project.summary|escapejs }}"{% if project.category %},
+        "about": "{{ project.category|escapejs }}"{% endif %}
       }
     }{% if not forloop.last %},{% endif %}
     {% endfor %}
