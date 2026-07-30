@@ -17,11 +17,11 @@
 # dashboard — do NOT upload this .env file itself to your repo or host.
 # ---------------------------------------------------------------------------
 
-DJANGO_SECRET_KEY=replace-with-a-real-random-secret-key
+DJANGO_SECRET_KEY=kd;jsalka'ja'flda;F,sdjodkpsa'cojmyakjmrwlbcf+csl!vbcwwzn7z@4_w+@sony4i!%6#*+1d^
 DJANGO_DEBUG=False
 DJANGO_ALLOWED_HOSTS=easyafrica.com,www.easyafrica.com
 
-DATABASE_URL=your-neon-connection-string-here
+DATABASE_URL=postgresql://postgres:MySecretKey124@db.hdfzldufgnckljskxscs.supabase.co:5432/postgres
 
 # Gmail SMTP settings
 DJANGO_EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
@@ -34,6 +34,6 @@ DJANGO_DEFAULT_FROM_EMAIL=youraddress@gmail.com
 CONTACT_FORM_RECIPIENT=youraddress@gmail.com
 
 # Media storage (Cloudinary) — leave blank to use local disk instead
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
+# CLOUDINARY_CLOUD_NAME=
+# CLOUDINARY_API_KEY=
+# CLOUDINARY_API_SECRET=
